@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        .contact-form div + div {
+            margin-top: 1em;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: .5em;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: .5em;
+            border: 1px solid #ccc;
+            border-radius: .5em;
+        }
+        .contact-form button {
+            padding: 1em;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: .5em;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form action="your-backend-endpoint" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="employee-type">Employee Type:</label>
+                <input type="radio" id="salaried" name="employee-type" value="salaried" required>
+                <label for="salaried">Salaried</label>
+                <input type="radio" id="own-business" name="employee-type" value="own-business">
+                <label for="own-business">Own Business</label>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
